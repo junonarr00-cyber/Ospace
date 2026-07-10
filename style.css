@@ -6,7 +6,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
-  overflow: hidden; /* Blokujemy przewijanie, żeby Tailsy nie uciekały */
+  overflow: hidden; 
   background-color: #0b0214;
   min-height: 100vh;
   display: flex;
@@ -65,18 +65,16 @@ p {
   color: #cbd5e1;
   line-height: 1.6;
   margin-bottom: 2rem;
-  font-size: 1.5rem; /* Powiększone 0_0 */
+  font-size: 1.5rem;
 }
-
-/* 🐈 Kontener i animacja Nyan Cata wokół przycisku */
 .btn-container {
   position: relative;
   display: inline-block;
-  padding: 40px; /* Przestrzeń do latania */
+  padding: 40px; 
 }
 .nyan-cat {
   position: absolute;
-  width: 50px;
+  width: 55px;
   height: auto;
   pointer-events: none;
   animation: orbit 4s linear infinite;
@@ -84,13 +82,12 @@ p {
 @keyframes orbit {
   0% { top: 0%; left: 0%; transform: scaleX(1); }
   25% { top: 0%; left: 80%; transform: scaleX(1); }
-  35% { transform: scaleX(-1); } /* Obrót kota w lewo */
+  35% { transform: scaleX(-1); } 
   50% { top: 70%; left: 80%; transform: scaleX(-1); }
   75% { top: 70%; left: 0%; transform: scaleX(-1); }
-  85% { transform: scaleX(1); }  /* Obrót kota w prawo */
+  85% { transform: scaleX(1); }  
   100% { top: 0%; left: 0%; transform: scaleX(1); }
 }
-
 button {
   background: linear-gradient(135deg, #a855f7, #3b82f6);
   color: white;
@@ -108,7 +105,7 @@ button:hover {
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
 }
 
-/* 💀 Ekran Jumpscare */
+/* Styl Jumpscare */
 #jumpscare-overlay {
   position: fixed;
   top: 0;
@@ -117,21 +114,20 @@ button:hover {
   height: 100vh;
   background-color: black;
   z-index: 9999;
-  display: none; /* Ukryty domyślnie */
+  display: none; 
 }
 .tails-scream {
   position: fixed;
-  width: 300px; /* Rozmiar pojedynczego Tailsa */
-  height: auto;
   z-index: 10000;
   transform: translate(-50%, -50%);
   animation: shake 0.1s infinite;
 }
 @keyframes shake {
-  0% { margin-left: 0px; margin-top: 0px; }
-  25% { margin-left: 5px; margin-top: -5px; }
-  50% { margin-left: -5px; margin-top: 5px; }
-  75% { margin-left: 5px; margin-top: 5px; }
-  100% { margin-left: -px; margin-top: -5px; }
+  0% { transform: translate(-50%, -50%) translate(0px, 0px); }
+  25% { transform: translate(-50%, -50%) translate(4px, -4px); }
+  50% { transform: translate(-50%, -50%) translate(-4px, 4px); }
+  75% { transform: translate(-50%, -50%) translate(4px, 4px); }
+  100% { transform: translate(-50%, -50%) translate(-4px, -4px); }
 }
+
 
