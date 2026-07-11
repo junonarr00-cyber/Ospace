@@ -49,7 +49,7 @@ document.getElementById('action-btn').addEventListener('click', () => {
     function spawnTails() {
       const img = document.createElement('img');
       // Nowy, stabilny link z Wikipedii, który nigdy nie zniknie
-      img.src = 'https://wikimedia.org'; 
+      img.src = 'Tails.jfif'; 
       img.classList.add('tails-scream');
       
       img.style.left = Math.random() * 100 + 'vw';
